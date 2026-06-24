@@ -1,67 +1,45 @@
-# Задание 3.1: REST API для регистрации пользователя
-
----
-
-## 1. Общее описание эндпоинта
-
-- HTTP метод: POST
-- URL: /api/v1/auth/register
-- Content-Type: application/json
-- Авторизация: не требуется
-
----
-
-## 2. Входные параметры (тело запроса)
-
-Поле          | Тип    | Обязательно? | Ограничения
---------------|--------|--------------|-------------------------------------------
-firstName     | string | Да           | 1-50 символов, только буквы
-lastName      | string | Да           | 1-50 символов, только буквы
-username      | string | Да           | 3-30 символов, буквы/цифры/подчеркивание
-password      | string | Да           | Минимум 8 символов. Должен содержать: 1 цифру, 1 заглавную букву, 1 строчную букву, 1 спецсимвол, 1 не-буквенно-цифровой символ
-recaptchaToken| string | Да           | Токен от Google reCAPTCHA после прохождения проверки
-
----
-
-## 3. Выходные параметры при успехе (HTTP 201 Created)
-
-Поле     | Тип    | Обязательно? | Описание
----------|--------|--------------|-------------------------------------------
-userId   | string | Да           | Уникальный ID созданного пользователя (UUID)
-username | string | Да           | Имя пользователя (совпадает с отправленным)
-message  | string | Да           | Текст подтверждения
-
----
-
-## 4. Выходные параметры при ошибке
-
-Поле        | Тип    | Обязательно? | Описание
-------------|--------|--------------|-------------------------------------------
-errorCode   | string | Да           | Код ошибки в системе (VALIDATION_ERROR, USER_EXISTS и т.д.)
-message     | string | Да           | Текст ошибки для пользователя
-fieldErrors | array  | Нет          | Список полей с ошибками (только для 400)
-
----
-
-## 5. Коды ответов и ошибки
-
-Код | Кто виноват      | Когда возникает                              | Текст сообщения
-----|------------------|---------------------------------------------|--------------------------
-201 | — (успех)        | Пользователь успешно создан                 | User registered successfully
-400 | Клиент (фронт)   | Невалидные данные (пустые поля, пароль не по правилам) | Passwords must have at least one non alphanumeric character...
-400 | Клиент (фронт)   | reCAPTCHA не пройдена                       | Please verify reCaptcha to register!
-409 | Клиент (фронт)   | Пользователь с таким username уже есть      | User exists!
-500 | Сервер (бэк)     | Проблема с базой данных, сервер недоступен | Internal server error. Please try again later.
-
----
-
-## 6. Примеры
-
-### 6.1. Успешный запрос
-
+Задание 3.1: REST API для регистрации пользователя
+1. Общее описание эндпоинта
+Table
+Параметр	Значение
+HTTP метод	POST
+URL	/api/v1/auth/register
+Content-Type	application/json
+Авторизация	Не требуется
+2. Входные параметры (тело запроса)
+Table
+Поле	Тип	Обязательность	Ограничения
+firstName	string	Да	1–50 символов, только буквы
+lastName	string	Да	1–50 символов, только буквы
+username	string	Да	3–30 символов, буквы/цифры/_
+password	string	Да	Минимум 8 символов. Должен содержать: 1 цифру, 1 заглавную букву, 1 строчную букву, 1 спецсимвол, 1 не-буквенно-цифровой символ
+recaptchaToken	string	Да	Токен от Google reCAPTCHA после прохождения проверки
+3. Выходные параметры при успехе (HTTP 201 Created)
+Table
+Поле	Тип	Обязательность	Описание
+userId	string	Да	Уникальный ID созданного пользователя (UUID)
+username	string	Да	Имя пользователя (совпадает с отправленным)
+message	string	Да	Текст подтверждения
+4. Выходные параметры при ошибке
+Table
+Поле	Тип	Обязательность	Описание
+errorCode	string	Да	Код ошибки в системе: VALIDATION_ERROR, USER_EXISTS, RECAPTCHA_FAILED, INTERNAL_ERROR
+message	string	Да	Текст ошибки для пользователя
+fieldErrors	array	Нет	Список полей с ошибками (только для VALIDATION_ERROR)
+5. Коды ответов и ошибки
+Table
+Код	Тип ошибки	Когда возникает	Текст сообщения
+201	Успех	Пользователь успешно создан	User registered successfully
+400	Клиентская ошибка	Невалидные данные (пустые поля, пароль не по правилам)	Passwords must have at least one non alphanumeric character, one digit ('0'-'9'), one uppercase ('A'-'Z'), one lowercase ('a'-'z'), one special character and Password must be eight characters or longer.
+400	Клиентская ошибка	reCAPTCHA не пройдена	Please verify reCaptcha to register!
+409	Клиентская ошибка	Пользователь с таким username уже существует	User exists!
+500	Серверная ошибка	Проблема с базой данных, сервер недоступен	Internal server error. Please try again later.
+6. Примеры
+6.1. Успешный запрос
+http
 POST /api/v1/auth/register
 Content-Type: application/json
-
+JSON
 {
   "firstName": "Ivan",
   "lastName": "Ivanov",
@@ -69,45 +47,31 @@ Content-Type: application/json
   "password": "Ivanov123!",
   "recaptchaToken": "03AGdBq25Q_..."
 }
-
 Ответ (201 Created):
-
+JSON
 {
   "userId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
   "username": "ivan",
   "message": "User registered successfully"
 }
-
----
-
-### 6.2. Ошибка — пользователь уже существует
-
+6.2. Ошибка — пользователь уже существует
 Запрос (тот же, что выше)
-
 Ответ (409 Conflict):
-
+JSON
 {
   "errorCode": "USER_EXISTS",
   "message": "User exists!"
 }
-
----
-
-### 6.3. Ошибка — не пройдена reCAPTCHA
-
+6.3. Ошибка — не пройдена reCAPTCHA
 Ответ (400 Bad Request):
-
+JSON
 {
   "errorCode": "RECAPTCHA_FAILED",
   "message": "Please verify reCaptcha to register!"
 }
-
----
-
-### 6.4. Ошибка — пароль не соответствует требованиям
-
+6.4. Ошибка — пароль не соответствует требованиям
 Ответ (400 Bad Request):
-
+JSON
 {
   "errorCode": "VALIDATION_ERROR",
   "message": "Invalid input data",
@@ -118,12 +82,8 @@ Content-Type: application/json
     }
   ]
 }
-
----
-
-## 7. Примечания для разработчика
-
-1. reCAPTCHA проверяется ДО валидации остальных полей.
-2. Если username уже занят — возвращаем 409, не проверяем остальные поля.
-3. Пароль храним в БД только в захешированном виде (bcrypt).
-4. После успешной регистрации можно сразу выдать access token (опционально).
+7. Примечания для разработчика
+reCAPTCHA проверяется ДО валидации остальных полей.
+Если username уже занят — возвращаем 409, не проверяем остальные поля.
+Пароль храним в БД только в захешированном виде (bcrypt).
+После успешной регистрации можно сразу выдать access token (опционально).
