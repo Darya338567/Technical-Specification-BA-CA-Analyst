@@ -1,0 +1,207 @@
+<mxfile host="app.diagrams.net" agent="Kimi">
+  <diagram name="Публикация товара" id="product-publish-bpmn">
+    <mxGraphModel dx="1875" dy="711" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pool-seller" parent="1" style="swimlane;horizontal=0;startSize=25;swimlaneLine=1;collapsible=0;fontStyle=1;fillColor=#E3F2FD;strokeColor=#1565C0;strokeWidth=2;fontSize=12;whiteSpace=wrap;" value="Продавец" vertex="1">
+          <mxGeometry height="180" width="1500" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="start-seller" parent="pool-seller" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="60" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-start-seller" parent="pool-seller" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" value="Хочет&#xa;продавать" vertex="1">
+          <mxGeometry height="28" width="60" x="43" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="task-create" parent="pool-seller" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=1.5;fontSize=11;" value="Создать карточку&#xa;товара (название,&#xa;фото, цена, остаток)" vertex="1">
+          <mxGeometry height="50" width="140" x="120" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="task-edit" parent="pool-seller" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=1.5;fontSize=11;" value="Редактировать&#xa;(при необходимости)" vertex="1">
+          <mxGeometry height="50" width="130" x="680" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="task-send" parent="pool-seller" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=1.5;fontSize=11;" value="Отправить на&#xa;модерацию" vertex="1">
+          <mxGeometry height="50" width="110" x="850" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="task-view-status" parent="pool-seller" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=1.5;fontSize=11;" value="Просмотреть&#xa;статус" vertex="1">
+          <mxGeometry height="50" width="100" x="1180" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="task-unpublish" parent="pool-seller" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=1.5;fontSize=11;" value="Снять с&#xa;публикации" vertex="1">
+          <mxGeometry height="50" width="100" x="1180" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="end-seller" parent="pool-seller" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFCDD2;strokeColor=#C62828;strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="1440" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-s1" edge="1" parent="pool-seller" source="start-seller" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="task-create" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-s2" edge="1" parent="pool-seller" source="task-edit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="task-send" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-s3" edge="1" parent="pool-seller" source="task-view-status" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-seller" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-s4" edge="1" parent="pool-seller" source="task-unpublish" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-seller" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pool-system" parent="1" style="swimlane;horizontal=0;startSize=25;swimlaneLine=1;collapsible=0;fontStyle=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontSize=12;whiteSpace=wrap;" value="Система (ЛК + Маркетплейс)" vertex="1">
+          <mxGeometry height="180" width="1500" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="start-system" parent="pool-system" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="320" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-start-system" parent="pool-system" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" value="Заявка на&#xa;модерацию" vertex="1">
+          <mxGeometry height="28" width="60" x="303" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="task-validate" parent="pool-system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=1.5;fontSize=11;" value="Авто-проверка:&#xa;запрещённые слова,&#xa;формат фото, цена" vertex="1">
+          <mxGeometry height="50" width="140" x="390" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway-auto" parent="pool-system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="36" width="36" x="570" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="task-save-draft" parent="pool-system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=1.5;fontSize=11;" value="Сохранить&#xa;черновик" vertex="1">
+          <mxGeometry height="50" width="100" x="560" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="task-publish" parent="pool-system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=1.5;fontSize=11;" value="Опубликовать&#xa;на витрине" vertex="1">
+          <mxGeometry height="50" width="110" x="1050" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="task-reject-sys" parent="pool-system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=1.5;fontSize=11;" value="Отклонить:&#xa;уведомить продавца&#xa;с причиной" vertex="1">
+          <mxGeometry height="50" width="110" x="1050" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="end-system-ok" parent="pool-system" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFCDD2;strokeColor=#C62828;strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="1440" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sys1" edge="1" parent="pool-system" source="start-system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="task-validate" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sys2" edge="1" parent="pool-system" source="task-validate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="gateway-auto" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sys3" edge="1" parent="pool-system" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="task-save-draft" value="Ошибки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sys4" edge="1" parent="pool-system" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="start-moderator" value="OK">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sys5" edge="1" parent="pool-system" source="task-publish" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-system-ok" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-sys6" edge="1" parent="pool-system" source="task-reject-sys" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-system-ok" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pool-moderator" parent="1" style="swimlane;horizontal=0;startSize=25;swimlaneLine=1;collapsible=0;fontStyle=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=2;fontSize=12;whiteSpace=wrap;" value="Модератор" vertex="1">
+          <mxGeometry height="140" width="1500" x="40" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="start-moderator" parent="pool-moderator" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="680" y="57" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-start-mod" parent="pool-moderator" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" value="Карточка на&#xa;проверку" vertex="1">
+          <mxGeometry height="28" width="60" x="663" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="task-check" parent="pool-moderator" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFE0B2;strokeColor=#E65100;strokeWidth=1.5;fontSize=11;" value="Проверить&#xa;соответствие&#xa;правилам" vertex="1">
+          <mxGeometry height="50" width="110" x="750" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway-mod" parent="pool-moderator" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="36" width="36" x="900" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="task-approve" parent="pool-moderator" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFE0B2;strokeColor=#E65100;strokeWidth=1.5;fontSize=11;" value="Одобрить" vertex="1">
+          <mxGeometry height="40" width="90" x="980" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="task-reject-mod" parent="pool-moderator" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFE0B2;strokeColor=#E65100;strokeWidth=1.5;fontSize=11;" value="Отклонить +&#xa;указать причину" vertex="1">
+          <mxGeometry height="40" width="100" x="980" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="end-mod" parent="pool-moderator" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFCDD2;strokeColor=#C62828;strokeWidth=3;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="1440" y="57" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-m1" edge="1" parent="pool-moderator" source="start-moderator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="task-check" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-m2" edge="1" parent="pool-moderator" source="task-check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="gateway-mod" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-m3" edge="1" parent="pool-moderator" source="gateway-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="task-approve" value="Одобрено">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-m4" edge="1" parent="pool-moderator" source="gateway-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="task-reject-mod" value="Отклонено">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-m5" edge="1" parent="pool-moderator" source="task-approve" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-mod" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sf-m6" edge="1" parent="pool-moderator" source="task-reject-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-mod" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mf1" edge="1" parent="1" source="task-create" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;" target="start-system" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mf2" edge="1" parent="1" source="task-save-draft" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E3F2FD;" target="task-edit" value="Черновик">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="220" />
+              <mxPoint x="745" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mf3" edge="1" parent="1" source="task-send" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" target="start-system" value="На модерацию">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="905" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mf4" edge="1" parent="1" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#FFF3E0;" target="start-moderator" value="На проверку">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="588" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mf5" edge="1" parent="1" source="task-approve" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" target="task-publish" value="Одобрено">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1025" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mf6" edge="1" parent="1" source="task-reject-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" target="task-reject-sys" value="Отклонено">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mf7" edge="1" parent="1" source="task-publish" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E3F2FD;" target="task-view-status" value="Опубликовано">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1105" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mf8" edge="1" parent="1" source="task-reject-sys" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E3F2FD;" target="task-edit" value="Отклонено">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1105" y="220" />
+              <mxPoint x="745" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mf9" edge="1" parent="1" source="task-unpublish" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" target="end-system-ok" value="Снять">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1230" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note1" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#FFF9C4;strokeColor=#F57F17;fontSize=10;" value="&lt;b&gt;Статусы товара:&lt;/b&gt;&lt;br&gt;• Черновик — создаётся при сохранении&lt;br&gt;• На модерации — после отправки&lt;br&gt;• Опубликован — на витрине&lt;br&gt;• Отклонён — требует доработки" vertex="1">
+          <mxGeometry height="80" width="220" x="40" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="note2" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontSize=10;" value="&lt;b&gt;Правила автопроверки:&lt;/b&gt;&lt;br&gt;• Нет запрещённых слов&lt;br&gt;• Фото: 1–10 шт, формат JPG/PNG&lt;br&gt;• Цена &gt; 0, количество ≥ 1&lt;br&gt;• Категория выбрана из справочника" vertex="1">
+          <mxGeometry height="80" width="240" x="280" y="560" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
