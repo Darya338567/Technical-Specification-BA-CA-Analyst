@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-06-23T18:30:00.000Z" agent="Kimi" version="22.1.0" type="device">
+  <diagram name="BPMN IT Equipment" id="it-equipment-bpmn">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- POOL: Пользователь -->
+        <mxCell id="pool-user" value="Пользователь офиса" style="swimlane;horizontal=0;startSize=30;swimlaneLine=1;collapsible=0;fontStyle=1;fillColor=#E1F5FE;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1520" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- POOL: 1-я линия ТП -->
+        <mxCell id="pool-l1" value="1-я линия технической поддержки" style="swimlane;horizontal=0;startSize=30;swimlaneLine=1;collapsible=0;fontStyle=1;fillColor=#FFF3E0;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="1520" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- POOL: Отдел снабжения -->
+        <mxCell id="pool-supply" value="Отдел снабжения" style="swimlane;horizontal=0;startSize=30;swimlaneLine=1;collapsible=0;fontStyle=1;fillColor=#E8F5E9;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="1520" height="260" as="geometry" />
+        </mxCell>
+
+        <!-- POOL: Логистика -->
+        <mxCell id="pool-log" value="Логистика" style="swimlane;horizontal=0;startSize=30;swimlaneLine=1;collapsible=0;fontStyle=1;fillColor=#F3E5F5;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="600" width="1520" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- POOL: Поставщик -->
+        <mxCell id="pool-vendor" value="Поставщик" style="swimlane;horizontal=0;startSize=30;swimlaneLine=1;collapsible=0;fontStyle=1;fillColor=#FFEBEE;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="700" width="1520" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ПОЛЬЗОВАТЕЛЬ ==================== -->
+        <mxCell id="start-user" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#90EE90;" vertex="1" parent="pool-user">
+          <mxGeometry x="60" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-start-user" value="Нужно&#xa;оборудование" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="pool-user">
+          <mxGeometry x="30" y="70" width="90" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-req" value="Сделать заявку&#xa;(почта/телефон)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-user">
+          <mxGeometry x="130" y="15" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg-to-l1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFE0B2;" vertex="1" parent="pool-user">
+          <mxGeometry x="320" y="30" width="40" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-receive" value="Получить&#xa;оборудование" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-user">
+          <mxGeometry x="1100" y="15" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-rate" value="Выставить оценку&#xa;сервиса (опционально)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-user">
+          <mxGeometry x="1280" y="15" width="130" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="end-user" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF6B6B;" vertex="1" parent="pool-user">
+          <mxGeometry x="1450" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== 1-я ЛИНИЯ ТП ==================== -->
+        <mxCell id="start-l1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#90EE90;" vertex="1" parent="pool-l1">
+          <mxGeometry x="320" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-start-l1" value="Заявка от&#xa;пользователя" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="pool-l1">
+          <mxGeometry x="300" y="70" width="70" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-ticket1" value="Выдать номер&#xa;обращения в&#xa;системе №1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-l1">
+          <mxGeometry x="390" y="15" width="130" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-create-req" value="Создать заявку в&#xa;системе №2 для&#xa;отдела снабжения" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-l1">
+          <mxGeometry x="560" y="15" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg-to-supply" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFE0B2;" vertex="1" parent="pool-l1">
+          <mxGeometry x="750" y="30" width="40" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-close1" value="Закрыть заявку&#xa;пользователя в&#xa;системе №1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-l1">
+          <mxGeometry x="1100" y="110" width="130" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-close2" value="Закрыть заявку&#xa;в системе №2" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-l1">
+          <mxGeometry x="1280" y="110" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="end-l1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF6B6B;" vertex="1" parent="pool-l1">
+          <mxGeometry x="1450" y="130" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ОТДЕЛ СНАБЖЕНИЯ ==================== -->
+        <mxCell id="start-supply" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#90EE90;" vertex="1" parent="pool-supply">
+          <mxGeometry x="750" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-start-supply" value="Уведомление:&#xa;заявка в системе №2&#xa;+ email" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="pool-supply">
+          <mxGeometry x="720" y="70" width="90" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-check" value="Проверить наличие&#xa;оборудования в&#xa;системе №3" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-supply">
+          <mxGeometry x="840" y="15" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="gateway-check" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;" vertex="1" parent="pool-supply">
+          <mxGeometry x="1030" y="30" width="40" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-call-log-yes" value="Вызвать&#xa;логистику" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-supply">
+          <mxGeometry x="1120" y="15" width="110" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-order" value="Сделать заявку&#xa;на закупку&#xa;поставщику (email)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-supply">
+          <mxGeometry x="1000" y="130" width="130" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-wait" value="Ждать&#xa;оборудование" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-supply">
+          <mxGeometry x="1180" y="130" width="100" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="event-receive" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFD700;" vertex="1" parent="pool-supply">
+          <mxGeometry x="1340" y="150" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-receive" value="Поставщик&#xa;привёз" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="pool-supply">
+          <mxGeometry x="1320" y="185" width="70" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-accept" value="Принять&#xa;оборудование&#xa;в системе №3" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-supply">
+          <mxGeometry x="1420" y="130" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-call-log-no" value="Вызвать&#xa;логистику" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-supply">
+          <mxGeometry x="1420" y="15" width="110" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ЛОГИСТИКА ==================== -->
+        <mxCell id="start-log" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#90EE90;" vertex="1" parent="pool-log">
+          <mxGeometry x="1160" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-deliver" value="Доставить&#xa;оборудование&#xa;1-й линии ТП" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-log">
+          <mxGeometry x="1230" y="15" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="end-log" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF6B6B;" vertex="1" parent="pool-log">
+          <mxGeometry x="1400" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ПОСТАВЩИК ==================== -->
+        <mxCell id="start-vendor" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#90EE90;" vertex="1" parent="pool-vendor">
+          <mxGeometry x="1030" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-process" value="Обработать&#xa;заявку на закупку" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-vendor">
+          <mxGeometry x="1100" y="15" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="task-ship" value="Привезти&#xa;оборудование" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;" vertex="1" parent="pool-vendor">
+          <mxGeometry x="1270" y="15" width="110" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="end-vendor" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF6B6B;" vertex="1" parent="pool-vendor">
+          <mxGeometry x="1420" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== СОЕДИНЕНИЯ ==================== -->
+        <mxCell id="flow1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="start-user" target="task-req">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-req" target="msg-to-l1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="start-l1" target="task-ticket1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-ticket1" target="task-create-req">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-create-req" target="msg-to-supply">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="start-supply" target="task-check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-check" target="gateway-check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow8-yes" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gateway-check" target="task-call-log-yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow8-no" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gateway-check" target="task-order">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1050" y="120"/><mxPoint x="1065" y="120"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-order" target="task-wait">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-wait" target="event-receive">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="event-receive" target="task-accept">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-accept" target="task-call-log-no">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1480" y="110"/><mxPoint x="1475" y="110"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="start-log" target="task-deliver">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-deliver" target="end-log">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="start-vendor" target="task-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-process" target="task-ship">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-ship" target="end-vendor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-close1" target="task-close2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-close2" target="end-l1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-receive" target="task-rate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="task-rate" target="end-user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Message Flows -->
+        <mxCell id="msg-flow1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;startArrow=oval;startFill=0;endArrow=block;endFill=0;" edge="1" parent="1" source="msg-to-l1" target="start-l1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg-flow2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;startArrow=oval;startFill=0;endArrow=block;endFill=0;" edge="1" parent="1" source="msg-to-supply" target="start-supply">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg-flow3" value="Вызов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;startArrow=oval;startFill=0;endArrow=block;endFill=0;" edge="1" parent="1" source="task-call-log-yes" target="start-log">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg-flow4" value="Вызов" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;startArrow=oval;startFill=0;endArrow=block;endFill=0;" edge="1" parent="1" source="task-call-log-no" target="start-log">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1475" y="590"/><mxPoint x="1175" y="590"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg-flow5" value="Заявка на закупку" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;startArrow=oval;startFill=0;endArrow=block;endFill=0;" edge="1" parent="1" source="task-order" target="start-vendor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg-flow6" value="Доставка" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;startArrow=oval;startFill=0;endArrow=block;endFill=0;" edge="1" parent="1" source="task-deliver" target="task-close1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1290" y="280"/><mxPoint x="1165" y="280"/></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg-flow7" value="Выдача оборудования" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;startArrow=oval;startFill=0;endArrow=block;endFill=0;" edge="1" parent="1" source="task-close1" target="task-receive">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1165" y="120"/><mxPoint x="1160" y="120"/></Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Notes -->
+        <mxCell id="note1" value="&lt;b&gt;Вопросы к процессу:&lt;/b&gt;&lt;br&gt;1. Что если закрытие в системе №1 не удалось, а в №2 — да?&lt;br&gt;2. Какое уведомление является триггером: email или ЛК?&lt;br&gt;3. Нет процесса эскалации при задержке поставщика&lt;br&gt;4. Оценка сервиса опциональна — нет таймаута&lt;br&gt;5. Не указан тип заявки в системе №2" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#FFF9C4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="820" width="380" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="note2" value="&lt;b&gt;Системы:&lt;/b&gt;&lt;br&gt;№1 — Трекинг обращений (1-я линия)&lt;br&gt;№2 — Заявки снабжению&lt;br&gt;№3 — Склад/учёт оборудования" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#E3F2FD;" vertex="1" parent="1">
+          <mxGeometry x="450" y="820" width="280" height="80" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
