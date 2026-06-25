@@ -83,8 +83,8 @@ POST /api/v1/auth/register с телом запроса (JSON)
             ↓ Да
     [Хешировать пароль (bcrypt)]
             ↓
-    [Сохранить в БД]
-            ↓
+    [Сохранить в БД]──Ошибка БД──→ [500 Internal Server Error]
+            ↓ Успех
     [201 Created + userId, username, message]
 
 ---
