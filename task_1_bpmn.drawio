@@ -228,18 +228,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mf7" edge="1" parent="1" source="task-deliver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#FFF3E0;" target="task-close1" value="Доставка">
+        <mxCell id="mf7" edge="1" parent="1" source="task-deliver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.603;entryY=1.106;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#FFF3E0;entryPerimeter=0;" target="task-close1" value="Доставка">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1275" y="580" />
-              <mxPoint x="1275" y="280" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mf8" edge="1" parent="1" source="task-close1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E3F2FD;" target="task-receive" value="Выдача оборудования">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1260" y="110" />
+              <mxPoint x="1270" y="580" />
+              <mxPoint x="1270" y="280" />
+              <mxPoint x="1272" y="280" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -248,6 +242,9 @@
         </mxCell>
         <mxCell id="note2" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontSize=10;" value="&lt;b&gt;Легенда систем:&lt;/b&gt;&lt;br&gt;№1 — Трекинг обращений (1-я линия ТП)&lt;br&gt;№2 — Заявки отделу снабжения&lt;br&gt;№3 — Склад / учёт оборудования" vertex="1">
           <mxGeometry height="70" width="280" x="460" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="XbenKFMrG471u0wiNJ-_-3" edge="1" parent="1" source="task-receive" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.408;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=8 8;" target="task-close1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
