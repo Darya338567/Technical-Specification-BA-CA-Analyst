@@ -138,6 +138,15 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="mf2" edge="1" parent="pool-supply" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="615" y="42" />
+            </Array>
+            <mxPoint x="615" y="-100" as="sourcePoint" />
+            <mxPoint x="750" y="42" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="pool-log" parent="1" style="swimlane;horizontal=0;startSize=25;swimlaneLine=1;collapsible=0;fontStyle=1;fillColor=#F3E5F5;strokeColor=#6A1B9A;strokeWidth=2;fontSize=12;whiteSpace=wrap;" value="Логистика" vertex="1">
           <mxGeometry height="90" width="1580" x="40" y="560" as="geometry" />
         </mxCell>
@@ -180,18 +189,12 @@
         <mxCell id="sf20" edge="1" parent="pool-vendor" source="task-ship" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-vendor" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mf1" edge="1" parent="1" source="task-req" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;" target="start-l1" value="">
+        <mxCell id="mf1" edge="1" parent="1" source="task-req" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="235" y="162" />
             </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mf2" edge="1" parent="1" source="task-create-req" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;" target="start-supply" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="655" y="342" />
-            </Array>
+            <mxPoint x="373" y="175" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="mf3" edge="1" parent="1" source="task-call-log-yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#F3E5F5;" target="start-log" value="Вызов">
