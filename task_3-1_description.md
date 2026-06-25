@@ -103,6 +103,15 @@
       ]
     }
 
+### 6.5. Ошибка — внутренняя ошибка сервера
+
+**Ответ (500 Internal Server Error):**
+
+    {
+      "errorCode": "INTERNAL_ERROR",
+      "message": "Internal server error. Please try again later."
+    }
+
 ## 7. Примечания для разработчика
 
 1. reCAPTCHA проверяется **ДО** валидации остальных полей.
