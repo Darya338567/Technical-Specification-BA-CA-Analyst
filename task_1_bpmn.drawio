@@ -118,8 +118,7 @@
         <mxCell id="sf11" edge="1" parent="pool-supply" source="gateway-check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="task-order" value="Нет">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1028" y="110" />
-              <mxPoint x="1050" y="110" />
+              <mxPoint x="1028" y="130" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -135,8 +134,7 @@
         <mxCell id="sf15" edge="1" parent="pool-supply" source="task-accept" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="task-call-log-no" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1455" y="105" />
-              <mxPoint x="1450" y="105" />
+              <mxPoint x="1450" y="130" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -192,49 +190,53 @@
         <mxCell id="mf2" edge="1" parent="1" source="task-create-req" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;" target="start-supply" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="615" y="310" />
+              <mxPoint x="655" y="342" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="mf3" edge="1" parent="1" source="task-call-log-yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#F3E5F5;" target="start-log" value="Вызов">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1150" y="560" />
+              <mxPoint x="1190" y="592" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mf4" edge="1" parent="1" source="task-call-log-no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#F3E5F5;" target="start-log" value="Вызов">
+        <mxCell id="mf4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#F3E5F5;" target="start-log" value="Вызов">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1450" y="560" />
+              <mxPoint x="1450" y="380" />
+              <mxPoint x="1450" y="592" />
             </Array>
+            <mxPoint x="1450" y="380" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="mf5" edge="1" parent="1" source="task-order" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#FFEBEE;" target="start-vendor" value="Заявка на закупку">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1050" y="650" />
+              <mxPoint x="1090" y="682" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="mf6" edge="1" parent="1" source="task-ship" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;" target="event-receive" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1310" y="650" />
+              <mxPoint x="1310" y="670" />
+              <mxPoint x="1310" y="478" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="mf7" edge="1" parent="1" source="task-deliver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#FFF3E0;" target="task-close1" value="Доставка">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1275" y="310" />
+              <mxPoint x="1275" y="580" />
+              <mxPoint x="1275" y="280" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="mf8" edge="1" parent="1" source="task-close1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E3F2FD;" target="task-receive" value="Выдача оборудования">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1220" y="130" />
+              <mxPoint x="1260" y="110" />
             </Array>
           </mxGeometry>
         </mxCell>
