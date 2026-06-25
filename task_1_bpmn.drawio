@@ -197,13 +197,6 @@
             <mxPoint x="373" y="175" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="mf3" edge="1" parent="1" source="task-call-log-yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#F3E5F5;" target="start-log" value="Вызов">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1190" y="592" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="mf4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#F3E5F5;" target="start-log" value="Вызов">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -228,15 +221,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mf7" edge="1" parent="1" source="task-deliver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.603;entryY=1.106;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#FFF3E0;entryPerimeter=0;" target="task-close1" value="Доставка">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1270" y="580" />
-              <mxPoint x="1270" y="280" />
-              <mxPoint x="1272" y="280" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="note1" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#FFF9C4;strokeColor=#F57F17;fontSize=10;" value="&lt;b&gt;Вопросы к процессу «как есть»:&lt;/b&gt;&lt;br&gt;1. Нет обработки ошибки закрытия заявки только в одной системе&lt;br&gt;2. Два канала уведомления (email + ЛК) — не ясен приоритет&lt;br&gt;3. Отсутствует эскалация при задержке поставщика&lt;br&gt;4. Оценка сервиса опциональна — нет SLA / таймаута&lt;br&gt;5. Не указан тип заявки в системе №2&lt;br&gt;6. Нет возврата оборудования при браке" vertex="1">
           <mxGeometry height="110" width="400" x="40" y="760" as="geometry" />
         </mxCell>
@@ -244,7 +228,23 @@
           <mxGeometry height="70" width="280" x="460" y="760" as="geometry" />
         </mxCell>
         <mxCell id="XbenKFMrG471u0wiNJ-_-3" edge="1" parent="1" source="task-receive" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.408;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=8 8;" target="task-close1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1249" y="140" />
+              <mxPoint x="1249" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XbenKFMrG471u0wiNJ-_-9" edge="1" parent="1" source="task-call-log-yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" target="start-log">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XbenKFMrG471u0wiNJ-_-11" edge="1" parent="1" source="task-deliver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.879;entryY=1.032;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=8 8;" target="task-close1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1315" y="430" />
+              <mxPoint x="1306" y="430" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
