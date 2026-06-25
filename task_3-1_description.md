@@ -33,7 +33,7 @@
 |:---|:---|:---|:---|
 | `errorCode` | string | Да | Код ошибки в системе: `VALIDATION_ERROR`, `USER_EXISTS`, `RECAPTCHA_FAILED`, `INTERNAL_ERROR` |
 | `message` | string | Да | Текст ошибки для пользователя |
-| `fieldErrors` | array | Нет | Список полей с ошибками (только для `VALIDATION_ERROR`) |
+| `fieldErrors` | array | Нет | Список объектов `{ "field": "string", "message": "string" }` (только для `VALIDATION_ERROR`) |
 
 ## 5. Коды ответов и ошибки
 
