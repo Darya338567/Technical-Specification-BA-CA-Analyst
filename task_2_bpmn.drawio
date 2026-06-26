@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Kimi">
   <diagram name="Публикация товара" id="product-publish-bpmn">
-    <mxGraphModel dx="1288" dy="711" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1875" dy="711" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,7 +22,7 @@
         <mxCell id="task-send" parent="pool-seller" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=1.5;fontSize=11;" value="Отправить на&#xa;модерацию" vertex="1">
           <mxGeometry height="50" width="110" x="850" y="65" as="geometry" />
         </mxCell>
-        <mxCell id="task-view-status" parent="pool-seller" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=1.5;fontSize=11;" value="Просмотреть&#xa;статус" vertex="1">
+        <mxCell id="task-view-status" parent="pool-seller" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=1.5;fontSize=11;" value="Проверить&lt;br&gt;статус &quot;Опубликовано&quot;" vertex="1">
           <mxGeometry height="50" width="100" x="1180" y="20" as="geometry" />
         </mxCell>
         <mxCell id="task-unpublish" parent="pool-seller" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=1.5;fontSize=11;" value="Снять с&#xa;публикации" vertex="1">
@@ -76,7 +76,7 @@
         <mxCell id="sf-sys2" edge="1" parent="pool-system" source="task-validate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="gateway-auto" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="sf-sys3" edge="1" parent="pool-system" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="task-save-draft" value="Ошибки">
+        <mxCell id="sf-sys3" edge="1" parent="pool-system" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="task-save-draft" value="Получены ошибки">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sf-sys4" edge="1" parent="pool-system" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;dashed=1;dashPattern=8 8;" target="start-moderator" value="">
@@ -93,13 +93,12 @@
         <mxCell id="sf-sys6" edge="1" parent="pool-system" source="task-reject-sys" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-system-ok" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mf3" edge="1" parent="pool-system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" value="На модерацию">
+        <mxCell id="mf3" edge="1" parent="pool-system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="task-validate" value="На модерацию">
           <mxGeometry relative="1" x="-0.4413" y="3" as="geometry">
             <mxPoint x="1" as="offset" />
             <Array as="points">
               <mxPoint x="902" y="77" />
-              <mxPoint x="337" y="77" />
-              <mxPoint x="337" y="50" />
+              <mxPoint x="460" y="77" />
             </Array>
             <mxPoint x="902" y="-65" as="sourcePoint" />
             <mxPoint x="330" y="50" as="targetPoint" />
