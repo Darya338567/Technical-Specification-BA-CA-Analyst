@@ -91,8 +91,6 @@ POST /auth/register с телом запроса (JSON)
             ↓
     [Ошибка записи в БД?] ──Да──→ [500 Internal Server Error]
             ↓ Нет
-    [Отправить email подтверждения]
-            ↓
     [201 Created + userId, username, message]
 
 ---
