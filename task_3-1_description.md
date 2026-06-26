@@ -5,7 +5,7 @@
 | Параметр | Значение |
 |:---|:---|
 | HTTP метод | `POST` |
-| URL | `/api/v1/auth/register` |
+| URL | `/api/register` |
 | Content-Type | `application/json` |
 | Авторизация | Не требуется |
 
@@ -50,7 +50,7 @@
 
 ### 6.1. Успешный запрос
 
-    POST /api/v1/auth/register
+    POST /api/register
     Content-Type: application/json
 
     {
