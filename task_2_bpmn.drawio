@@ -49,8 +49,8 @@
         <mxCell id="start-system" parent="pool-system" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;" value="" vertex="1">
           <mxGeometry height="26" width="26" x="320" y="27" as="geometry" />
         </mxCell>
-        <mxCell id="lbl-start-system" parent="pool-system" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" value="Заявка на&#xa;модерацию" vertex="1">
-          <mxGeometry height="28" width="60" x="303" y="105" as="geometry" />
+        <mxCell id="lbl-start-system" parent="pool-system" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Helvetica;fontColor=default;fontStyle=0;labelBackgroundColor=#FFF9C4;" value="Заявка на&#xa;модерацию" vertex="1">
+          <mxGeometry height="28" width="60" x="270" y="53" as="geometry" />
         </mxCell>
         <mxCell id="task-validate" parent="pool-system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=1.5;fontSize=11;" value="Авто-проверка:&#xa;запрещённые слова,&#xa;формат фото, цена" vertex="1">
           <mxGeometry height="50" width="140" x="390" y="15" as="geometry" />
@@ -92,6 +92,18 @@
         </mxCell>
         <mxCell id="sf-sys6" edge="1" parent="pool-system" source="task-reject-sys" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-system-ok" value="">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mf3" edge="1" parent="pool-system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" value="На модерацию">
+          <mxGeometry relative="1" x="-0.4413" y="3" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="902" y="77" />
+              <mxPoint x="337" y="77" />
+              <mxPoint x="337" y="50" />
+            </Array>
+            <mxPoint x="902" y="-65" as="sourcePoint" />
+            <mxPoint x="330" y="50" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="pool-moderator" parent="1" style="swimlane;horizontal=0;startSize=25;swimlaneLine=1;collapsible=0;fontStyle=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=2;fontSize=12;whiteSpace=wrap;" value="Модератор" vertex="1">
           <mxGeometry height="140" width="1500" x="40" y="400" as="geometry" />
@@ -143,35 +155,6 @@
         </mxCell>
         <mxCell id="sf-m6" edge="1" parent="pool-moderator" source="task-reject-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-mod" value="">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="mf1" edge="1" parent="1" source="task-create" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;" target="start-system" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="230" y="297" />
-              <mxPoint x="370" y="297" />
-              <mxPoint x="370" y="273" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mf3" edge="1" parent="1" source="task-send" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" value="На модерацию">
-          <mxGeometry relative="1" x="-0.4413" y="3" as="geometry">
-            <mxPoint x="1" as="offset" />
-            <Array as="points">
-              <mxPoint x="945" y="297" />
-              <mxPoint x="380" y="297" />
-              <mxPoint x="380" y="270" />
-            </Array>
-            <mxPoint x="373" y="270" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mf4" edge="1" parent="1" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#FFF3E0;" target="start-moderator" value="На проверку">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="638" y="328" />
-              <mxPoint x="550" y="328" />
-              <mxPoint x="550" y="457" />
-            </Array>
-          </mxGeometry>
         </mxCell>
         <mxCell id="note1" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#FFF9C4;strokeColor=#F57F17;fontSize=10;" value="&lt;b&gt;Статусы товара:&lt;/b&gt;&lt;br&gt;• Черновик — создаётся при сохранении&lt;br&gt;• На модерации — после отправки&lt;br&gt;• Опубликован — на витрине&lt;br&gt;• Отклонён — требует доработки" vertex="1">
           <mxGeometry height="80" width="220" x="40" y="560" as="geometry" />
@@ -233,6 +216,9 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="LQupT064AYVrGXeOsNIc-18" edge="1" parent="1" source="task-save-draft" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" target="task-edit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-20" edge="1" parent="1" source="task-create" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" target="start-system">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
