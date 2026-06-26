@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Kimi">
   <diagram name="Публикация товара" id="product-publish-bpmn">
-    <mxGraphModel dx="1875" dy="711" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1288" dy="711" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -47,25 +47,25 @@
           <mxGeometry height="180" width="1500" x="40" y="220" as="geometry" />
         </mxCell>
         <mxCell id="start-system" parent="pool-system" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="26" width="26" x="320" y="77" as="geometry" />
+          <mxGeometry height="26" width="26" x="320" y="27" as="geometry" />
         </mxCell>
         <mxCell id="lbl-start-system" parent="pool-system" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" value="Заявка на&#xa;модерацию" vertex="1">
           <mxGeometry height="28" width="60" x="303" y="105" as="geometry" />
         </mxCell>
         <mxCell id="task-validate" parent="pool-system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=1.5;fontSize=11;" value="Авто-проверка:&#xa;запрещённые слова,&#xa;формат фото, цена" vertex="1">
-          <mxGeometry height="50" width="140" x="390" y="65" as="geometry" />
+          <mxGeometry height="50" width="140" x="390" y="15" as="geometry" />
         </mxCell>
         <mxCell id="gateway-auto" parent="pool-system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="36" width="36" x="570" y="72" as="geometry" />
+          <mxGeometry height="36" width="36" x="580" y="22" as="geometry" />
         </mxCell>
         <mxCell id="task-save-draft" parent="pool-system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=1.5;fontSize=11;" value="Сохранить&#xa;черновик" vertex="1">
-          <mxGeometry height="50" width="100" x="560" y="140" as="geometry" />
+          <mxGeometry height="50" width="100" x="548" y="120" as="geometry" />
         </mxCell>
         <mxCell id="task-publish" parent="pool-system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=1.5;fontSize=11;" value="Опубликовать&#xa;на витрине" vertex="1">
-          <mxGeometry height="50" width="110" x="1050" y="65" as="geometry" />
+          <mxGeometry height="50" width="110" x="1060" y="15" as="geometry" />
         </mxCell>
         <mxCell id="task-reject-sys" parent="pool-system" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=1.5;fontSize=11;" value="Отклонить:&#xa;уведомить продавца&#xa;с причиной" vertex="1">
-          <mxGeometry height="50" width="110" x="1050" y="140" as="geometry" />
+          <mxGeometry height="50" width="110" x="1050" y="108" as="geometry" />
         </mxCell>
         <mxCell id="end-system-ok" parent="pool-system" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFCDD2;strokeColor=#C62828;strokeWidth=3;" value="" vertex="1">
           <mxGeometry height="26" width="26" x="1440" y="77" as="geometry" />
@@ -79,8 +79,13 @@
         <mxCell id="sf-sys3" edge="1" parent="pool-system" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="task-save-draft" value="Ошибки">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="sf-sys4" edge="1" parent="pool-system" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="start-moderator" value="OK">
+        <mxCell id="sf-sys4" edge="1" parent="pool-system" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;dashed=1;dashPattern=8 8;" target="start-moderator" value="">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-1" connectable="0" parent="sf-sys4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=9;fontColor=default;fontStyle=0;labelBackgroundColor=#FFF3E0;" value="ОК" vertex="1">
+          <mxGeometry relative="1" x="0.4081" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="sf-sys5" edge="1" parent="pool-system" source="task-publish" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-system-ok" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -99,6 +104,16 @@
         </mxCell>
         <mxCell id="task-check" parent="pool-moderator" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFE0B2;strokeColor=#E65100;strokeWidth=1.5;fontSize=11;" value="Проверить&#xa;соответствие&#xa;правилам" vertex="1">
           <mxGeometry height="50" width="110" x="750" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-2" edge="1" parent="pool-moderator" source="gateway-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.12;entryY=1.044;entryDx=0;entryDy=0;entryPerimeter=0;" target="task-reject-mod">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="918" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-4" connectable="0" parent="LQupT064AYVrGXeOsNIc-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=9;fontColor=default;fontStyle=0;labelBackgroundColor=#FFF3E0;" value="Отклонено" vertex="1">
+          <mxGeometry relative="1" x="-0.0534" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="gateway-mod" parent="pool-moderator" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F57F17;strokeWidth=2;" value="" vertex="1">
           <mxGeometry height="36" width="36" x="900" y="52" as="geometry" />
@@ -119,10 +134,9 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sf-m3" edge="1" parent="pool-moderator" source="gateway-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="task-approve" value="Одобрено">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="sf-m4" edge="1" parent="pool-moderator" source="gateway-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;" target="task-reject-mod" value="Отклонено">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" x="0.0135" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="sf-m5" edge="1" parent="pool-moderator" source="task-approve" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-mod" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -130,68 +144,32 @@
         <mxCell id="sf-m6" edge="1" parent="pool-moderator" source="task-reject-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;" target="end-mod" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="mf1" edge="1" parent="1" source="task-create" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;" target="start-system" value="">
+        <mxCell id="mf1" edge="1" parent="1" source="task-create" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;" target="start-system" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="190" y="220" />
+              <mxPoint x="230" y="297" />
+              <mxPoint x="370" y="297" />
+              <mxPoint x="370" y="273" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mf2" edge="1" parent="1" source="task-save-draft" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E3F2FD;" target="task-edit" value="Черновик">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="mf3" edge="1" parent="1" source="task-send" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" value="На модерацию">
+          <mxGeometry relative="1" x="-0.4413" y="3" as="geometry">
+            <mxPoint x="1" as="offset" />
             <Array as="points">
-              <mxPoint x="610" y="220" />
-              <mxPoint x="745" y="220" />
+              <mxPoint x="945" y="297" />
+              <mxPoint x="380" y="297" />
+              <mxPoint x="380" y="270" />
             </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mf3" edge="1" parent="1" source="task-send" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" target="start-system" value="На модерацию">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="905" y="220" />
-            </Array>
+            <mxPoint x="373" y="270" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="mf4" edge="1" parent="1" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#FFF3E0;" target="start-moderator" value="На проверку">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="588" y="400" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mf5" edge="1" parent="1" source="task-approve" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" target="task-publish" value="Одобрено">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1025" y="400" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mf6" edge="1" parent="1" source="task-reject-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" target="task-reject-sys" value="Отклонено">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1030" y="400" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mf7" edge="1" parent="1" source="task-publish" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E3F2FD;" target="task-view-status" value="Опубликовано">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1105" y="220" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mf8" edge="1" parent="1" source="task-reject-sys" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E3F2FD;" target="task-edit" value="Отклонено">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1105" y="220" />
-              <mxPoint x="745" y="220" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="mf9" edge="1" parent="1" source="task-unpublish" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=1.5;dashed=1;dashPattern=6 4;startArrow=oval;startFill=0;startSize=5;endArrow=block;endFill=0;endSize=5;fontSize=9;labelBackgroundColor=#E8F5E9;" target="end-system-ok" value="Снять">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1230" y="400" />
+              <mxPoint x="638" y="328" />
+              <mxPoint x="550" y="328" />
+              <mxPoint x="550" y="457" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -200,6 +178,62 @@
         </mxCell>
         <mxCell id="note2" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontSize=10;" value="&lt;b&gt;Правила автопроверки:&lt;/b&gt;&lt;br&gt;• Нет запрещённых слов&lt;br&gt;• Фото: 1–10 шт, формат JPG/PNG&lt;br&gt;• Цена &gt; 0, количество ≥ 1&lt;br&gt;• Категория выбрана из справочника" vertex="1">
           <mxGeometry height="80" width="240" x="280" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-5" edge="1" parent="1" source="task-approve" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" target="task-publish">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-6" connectable="0" parent="LQupT064AYVrGXeOsNIc-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=10;fontColor=default;fontStyle=0;labelBackgroundColor=#FFF9C4;" value="Одобрено" vertex="1">
+          <mxGeometry relative="1" x="0.1153" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-8" edge="1" parent="1" source="task-reject-mod" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.827;entryY=0.975;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=8 8;" target="task-reject-sys">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-9" connectable="0" parent="LQupT064AYVrGXeOsNIc-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=10;fontColor=default;fontStyle=0;labelBackgroundColor=#FFF9C4;" value="Отклонено" vertex="1">
+          <mxGeometry relative="1" x="0.1353" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-10" edge="1" parent="1" source="task-unpublish" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" target="end-system-ok">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1493" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-11" connectable="0" parent="LQupT064AYVrGXeOsNIc-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=10;fontColor=default;fontStyle=0;labelBackgroundColor=#FFF9C4;" value="Снять с публикации" vertex="1">
+          <mxGeometry relative="1" x="0.6746" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-14" edge="1" parent="1" source="task-publish" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" target="task-view-status">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1140" y="172" />
+              <mxPoint x="1200" y="172" />
+              <mxPoint x="1200" y="85" />
+            </Array>
+            <mxPoint x="1210" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-15" connectable="0" parent="LQupT064AYVrGXeOsNIc-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=10;fontColor=default;fontStyle=0;labelBackgroundColor=#FFF9C4;" value="Опубликовано" vertex="1">
+          <mxGeometry relative="1" x="-0.2413" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-16" edge="1" parent="1" source="task-reject-sys" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.646;entryY=0.995;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=8 8;" target="task-edit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-17" connectable="0" parent="LQupT064AYVrGXeOsNIc-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=10;fontColor=default;fontStyle=0;labelBackgroundColor=#FFF9C4;" value="Отклонено" vertex="1">
+          <mxGeometry relative="1" x="0.0201" y="2" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LQupT064AYVrGXeOsNIc-18" edge="1" parent="1" source="task-save-draft" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" target="task-edit">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
