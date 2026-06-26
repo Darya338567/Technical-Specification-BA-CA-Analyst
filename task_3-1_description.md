@@ -5,7 +5,7 @@
 | Параметр | Значение |
 |:---|:---|
 | HTTP метод | `POST` |
-| URL | `/api/register` |
+| URL | `/api/v1/auth/register` |
 | Content-Type | `application/json` |
 | Авторизация | Не требуется |
 
@@ -16,7 +16,6 @@
 | `firstName` | string | Да | 1–50 символов, только буквы |
 | `lastName` | string | Да | 1–50 символов, только буквы |
 | `username` | string | Да | 3–30 символов, буквы/цифры/`_` |
-| `email` | string | Да | Валидный формат email (RFC 5322) |
 | `password` | string | Да | Минимум 8 символов. Должен содержать: 1 цифру, 1 заглавную букву, 1 строчную букву, 1 спецсимвол |
 | `recaptchaToken` | string | Да | Токен от Google reCAPTCHA после прохождения проверки |
 
@@ -51,14 +50,13 @@
 
 ### 6.1. Успешный запрос
 
-    POST /api/register
+    POST /api/v1/auth/register
     Content-Type: application/json
 
     {
       "firstName": "Ivan",
       "lastName": "Ivanov",
       "username": "ivan",
-      "email": "ivan@example.com",
       "password": "Ivanov123!",
       "recaptchaToken": "03AGdBq25Q_..."
     }
@@ -71,15 +69,13 @@
       "message": "User registered successfully"
     }
 
-### 6.2. Ошибка — пользователь уже существует
+### 6.2. Ошибка — невалидный JSON
 
-Запрос (тот же, что выше)
-
-**Ответ (409 Conflict):**
+**Ответ (422 Unprocessable Entity):**
 
     {
-      "errorCode": "USER_EXISTS",
-      "message": "User exists!"
+      "errorCode": "VALIDATION_ERROR",
+      "message": "Invalid JSON"
     }
 
 ### 6.3. Ошибка — не пройдена reCAPTCHA
@@ -106,13 +102,15 @@
       ]
     }
 
-### 6.5. Ошибка — невалидный JSON
+### 6.5. Ошибка — пользователь уже существует
 
-**Ответ (422 Unprocessable Entity):**
+Запрос (тот же, что выше)
+
+**Ответ (409 Conflict):**
 
     {
-      "errorCode": "VALIDATION_ERROR",
-      "message": "Invalid JSON"
+      "errorCode": "USER_EXISTS",
+      "message": "User exists!"
     }
 
 ### 6.6. Ошибка — внутренняя ошибка сервера
@@ -129,5 +127,4 @@
 1. reCAPTCHA проверяется **ДО** валидации остальных полей.
 2. Если `username` уже занят — возвращаем `409`, не проверяем остальные поля.
 3. Пароль храним в БД только в захешированном виде (bcrypt).
-4. После успешной регистрации отправляем email с подтверждением регистрации.
-5. После успешной регистрации можно сразу выдать access token (опционально).
+4. После успешной регистрации можно сразу выдать access token (опционально).
