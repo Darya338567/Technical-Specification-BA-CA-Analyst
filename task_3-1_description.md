@@ -5,7 +5,7 @@
 | Параметр | Значение |
 |:---|:---|
 | HTTP метод | `POST` |
-| URL | `/api/register` |
+| URL | `/auth/register` |
 | Content-Type | `application/json` |
 | Авторизация | Не требуется |
 
@@ -13,11 +13,11 @@
 
 | Поле | Тип | Обязательность | Ограничения |
 |:---|:---|:---|:---|
-| `firstName` | string | Да | 1–50 символов, только буквы |
-| `lastName` | string | Да | 1–50 символов, только буквы |
-| `username` | string | Да | 3–30 символов, буквы/цифры/`_` |
-| `password` | string | Да | Минимум 8 символов. Должен содержать: 1 цифру, 1 заглавную букву, 1 строчную букву, 1 спецсимвол |
-| `recaptchaToken` | string | Да | Токен от Google reCAPTCHA после прохождения проверки |
+| `firstName` | string | Да | — |
+| `lastName` | string | Да | — |
+| `username` | string | Да | — |
+| `password` | string | Да | Минимум 8 символов, должен содержать 1 цифру, 1 заглавную букву, 1 строчную букву, 1 спецсимвол |
+| `recaptchaToken` | string | Да | Токен от Google reCAPTCHA |
 
 ## 3. Выходные параметры при успехе (HTTP 201 Created)
 
@@ -39,18 +39,18 @@
 
 | Код | Тип ошибки | Когда возникает | Текст сообщения |
 |:---|:---|:---|:---|
-| 201 | Успех | Пользователь успешно создан | `User registered successfully` |
-| 400 | Клиентская ошибка | Невалидные данные (пустые поля, пароль не по правилам) | `Passwords must have at least one non alphanumeric character, one digit ('0'-'9'), one uppercase ('A'-'Z'), one lowercase ('a'-'z'), one special character and Password must be eight characters or longer.` |
+| 201 | Успех | Пользователь успешно создан | `User Register Successfully` |
+| 400 | Клиентская ошибка | Невалидные данные (пустые поля, неверный формат, слабый пароль, неверный username) | `Invalid input data` |
 | 400 | Клиентская ошибка | reCAPTCHA не пройдена | `Please verify reCaptcha to register!` |
 | 409 | Клиентская ошибка | Пользователь с таким `username` уже существует | `User exists!` |
 | 422 | Клиентская ошибка | Невалидный JSON в теле запроса | `Invalid JSON` |
-| 500 | Серверная ошибка | Проблема с базой данных, сервер недоступен | `Internal server error. Please try again later.` |
+| 500 | Серверная ошибка | Проблема с базой данных, ошибка при создании записи | `Internal server error. Please try again later.` |
 
 ## 6. Примеры
 
 ### 6.1. Успешный запрос
 
-    POST /api/register
+    POST /auth/register
     Content-Type: application/json
 
     {
@@ -66,7 +66,7 @@
     {
       "userId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
       "username": "ivan",
-      "message": "User registered successfully"
+      "message": "User Register Successfully"
     }
 
 ### 6.2. Ошибка — невалидный JSON
@@ -127,4 +127,5 @@
 1. reCAPTCHA проверяется **ДО** валидации остальных полей.
 2. Если `username` уже занят — возвращаем `409`, не проверяем остальные поля.
 3. Пароль храним в БД только в захешированном виде (bcrypt).
-4. После успешной регистрации можно сразу выдать access token (опционально).
+4. После успешной регистрации отправляем email с подтверждением регистрации.
+5. После успешной регистрации можно сразу выдать access token (опционально).
