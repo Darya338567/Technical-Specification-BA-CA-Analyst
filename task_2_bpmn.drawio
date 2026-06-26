@@ -80,7 +80,12 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="sf-sys4" edge="1" parent="pool-system" source="gateway-auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#333333;strokeWidth=1.5;endArrow=block;endFill=1;labelBackgroundColor=#FFF9C4;fontSize=10;dashed=1;dashPattern=8 8;" target="start-moderator" value="">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="40" />
+              <mxPoint x="660" y="250" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="LQupT064AYVrGXeOsNIc-1" connectable="0" parent="sf-sys4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;fontSize=9;fontColor=default;fontStyle=0;labelBackgroundColor=#FFF3E0;" value="ОК" vertex="1">
           <mxGeometry relative="1" x="0.4081" y="-2" as="geometry">
