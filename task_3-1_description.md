@@ -16,7 +16,8 @@
 | `firstName` | string | Да | 1–50 символов, только буквы |
 | `lastName` | string | Да | 1–50 символов, только буквы |
 | `username` | string | Да | 3–30 символов, буквы/цифры/`_` |
-| `password` | string | Да | Минимум 8 символов. Должен содержать: 1 цифру, 1 заглавную букву, 1 строчную букву, 1 спецсимвол, 1 не-буквенно-цифровой символ |
+| `email` | string | Да | Валидный формат email (RFC 5322) |
+| `password` | string | Да | Минимум 8 символов. Должен содержать: 1 цифру, 1 заглавную букву, 1 строчную букву, 1 спецсимвол |
 | `recaptchaToken` | string | Да | Токен от Google reCAPTCHA после прохождения проверки |
 
 ## 3. Выходные параметры при успехе (HTTP 201 Created)
@@ -43,6 +44,7 @@
 | 400 | Клиентская ошибка | Невалидные данные (пустые поля, пароль не по правилам) | `Passwords must have at least one non alphanumeric character, one digit ('0'-'9'), one uppercase ('A'-'Z'), one lowercase ('a'-'z'), one special character and Password must be eight characters or longer.` |
 | 400 | Клиентская ошибка | reCAPTCHA не пройдена | `Please verify reCaptcha to register!` |
 | 409 | Клиентская ошибка | Пользователь с таким `username` уже существует | `User exists!` |
+| 422 | Клиентская ошибка | Невалидный JSON в теле запроса | `Invalid JSON` |
 | 500 | Серверная ошибка | Проблема с базой данных, сервер недоступен | `Internal server error. Please try again later.` |
 
 ## 6. Примеры
@@ -56,6 +58,7 @@
       "firstName": "Ivan",
       "lastName": "Ivanov",
       "username": "ivan",
+      "email": "ivan@example.com",
       "password": "Ivanov123!",
       "recaptchaToken": "03AGdBq25Q_..."
     }
@@ -103,7 +106,16 @@
       ]
     }
 
-### 6.5. Ошибка — внутренняя ошибка сервера
+### 6.5. Ошибка — невалидный JSON
+
+**Ответ (422 Unprocessable Entity):**
+
+    {
+      "errorCode": "VALIDATION_ERROR",
+      "message": "Invalid JSON"
+    }
+
+### 6.6. Ошибка — внутренняя ошибка сервера
 
 **Ответ (500 Internal Server Error):**
 
@@ -117,4 +129,5 @@
 1. reCAPTCHA проверяется **ДО** валидации остальных полей.
 2. Если `username` уже занят — возвращаем `409`, не проверяем остальные поля.
 3. Пароль храним в БД только в захешированном виде (bcrypt).
-4. После успешной регистрации можно сразу выдать access token (опционально).
+4. После успешной регистрации отправляем email с подтверждением регистрации.
+5. После успешной регистрации можно сразу выдать access token (опционально).
